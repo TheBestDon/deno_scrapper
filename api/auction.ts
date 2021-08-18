@@ -1,4 +1,7 @@
-import { ServerRequest, DOMParser, SmtpClient, config } from "../deps.ts";
+import { ServerRequest  } from "https://deno.land/std@0.105.0/http/server.ts";
+import { DOMParser } from "https://deno.land/x/deno_dom@v0.1.13-alpha/deno-dom-wasm.ts";
+import { config } from 'https://deno.land/x/dotenv@v3.0.0/mod.ts';
+import { SmtpClient } from "https://deno.land/x/smtp@v0.7.0/mod.ts";
 
 const { GMAIL_USER, GMAIL_PASS } = config()
 interface ConnectTLS {
@@ -17,8 +20,8 @@ interface SendData {
 const connectData = {
     hostname: "smtp.gmail.com",
     port: 465,
-    username: GMAIL_USER,
-    password: GMAIL_PASS,
+    username: 'filters2sell@gmail.com',
+    password: 'WB$`d4&x&@P`wntt^fQsc',
 }
 const sendData = {
     from: "filters2sell@gmail.com",
